@@ -30,7 +30,7 @@ namespace ServiceBusReader
 
                     client.RegisterMessageHandler((message, _) =>
                     {
-                        Console.WriteLine($"\n[{id}]Received message: {Encoding.UTF8.GetString(message.Body)}");
+                        Console.WriteLine($"\n[{id}] Received message: {Encoding.UTF8.GetString(message.Body)}");
 
                         return Task.CompletedTask;
                     },
