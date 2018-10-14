@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHubWriter", "EventHubWriter\EventHubWriter.csproj", "{1F6041FC-A91B-4FDF-8F07-EE16EE274169}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{C066F51D-DB30-4B68-A3E1-D407DF34B654}"
+	ProjectSection(SolutionItems) = preProject
+		appsettings.json = appsettings.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHubReader", "EventHubReader\EventHubReader.csproj", "{5F9F0580-D5CC-4835-8DD4-0E2AA19D076E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F6041FC-A91B-4FDF-8F07-EE16EE274169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F6041FC-A91B-4FDF-8F07-EE16EE274169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F6041FC-A91B-4FDF-8F07-EE16EE274169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F6041FC-A91B-4FDF-8F07-EE16EE274169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F9F0580-D5CC-4835-8DD4-0E2AA19D076E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F9F0580-D5CC-4835-8DD4-0E2AA19D076E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F9F0580-D5CC-4835-8DD4-0E2AA19D076E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F9F0580-D5CC-4835-8DD4-0E2AA19D076E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F4B0E7A-6626-44CF-A447-B7E5E578D291}
+	EndGlobalSection
+EndGlobal
