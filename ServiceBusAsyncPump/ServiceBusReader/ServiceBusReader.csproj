@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Reader.cs~RFec1f76c.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="..\appsettings.json" Link="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
