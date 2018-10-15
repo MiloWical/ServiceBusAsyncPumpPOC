@@ -10,6 +10,8 @@ namespace ServiceBusReader
 
     public class Reader
     {
+        private const bool AutoComplete = false;
+
         public static void Main(string[] args)
         {
             IConfiguration config = new ConfigurationBuilder()
@@ -22,21 +24,23 @@ namespace ServiceBusReader
             {
                 var closure = i;
 
+                var client = new QueueClient(config["ConnectionString"], config["QueuePath"]);
+
                 Task.Run(() =>
                 {
                     var id = closure;
-
-                    var client = new QueueClient(config["ConnectionString"], config["QueuePath"]);
 
                     client.RegisterMessageHandler((message, _) =>
                     {
                         Console.WriteLine($"\n[{id}] Received message: {Encoding.UTF8.GetString(message.Body)}");
 
-                        return Task.CompletedTask;
+                        // ReSharper disable ConditionIsAlwaysTrueOrFalse
+                        return AutoComplete ? Task.CompletedTask : client.CompleteAsync(message.SystemProperties.LockToken);
+                        // ReSharper restore ConditionIsAlwaysTrueOrFalse
                     },
                     new MessageHandlerOptions(_ => Task.CompletedTask)
                     {
-                        AutoComplete = true
+                        AutoComplete = AutoComplete
                     }
                     );
 
